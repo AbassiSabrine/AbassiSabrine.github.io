@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sabrine Abassi - Data Scientist R&D spécialisée en IA, Computer Vision, NLP et Signal Processing. Publication Q1, expertise en Machine Learning et Deep Learning.">
-    <meta name="keywords" content="Data Scientist, AI Engineer, Machine Learning, Deep Learning, Computer Vision, NLP, Tunisian Dialect, Signal Processing">
+    <meta name="keywords" content="Data Scientist, AI Engineer, Machine Learning, Deep Learning, Computer Vision, NLP, Signal Processing">
     <meta name="author" content="Sabrine Abassi">
     <title>Sabrine Abassi | Data Scientist R&D - Spécialiste IA & ML</title>
     
@@ -129,45 +129,6 @@
             display: flex;
             gap: 2.5rem;
             list-style: none;
-        }
-
-        .language-selector {
-            display: flex;
-            gap: 0.5rem;
-            align-items: center;
-            margin-left: 2rem;
-        }
-
-        .lang-btn {
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
-            border: 2px solid rgba(15, 44, 89, 0.2);
-            background: white;
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .lang-btn:hover {
-            background: var(--gradient-1);
-            color: white;
-            border-color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(15, 44, 89, 0.2);
-        }
-
-        .lang-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            box-shadow: 0 5px 15px rgba(15, 44, 89, 0.3);
         }
 
         nav a {
@@ -802,6 +763,7 @@
             .hero .container {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 4rem;
             }
 
             .hero-content {
@@ -821,21 +783,7 @@
             }
 
             nav .container {
-                position: relative;
-            }
-
-            .language-selector {
-                position: absolute;
-                top: 50%;
-                right: 4rem;
-                transform: translateY(-50%);
-                margin-left: 0;
-                gap: 0.3rem;
-            }
-
-            .lang-btn {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.75rem;
+                padding: 0;
             }
 
             nav ul {
@@ -865,14 +813,23 @@
 
             .hero {
                 padding: 6rem 1.5rem 3rem;
+                min-height: auto;
             }
 
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
 
             .hero-title {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-expertise {
+                justify-content: center;
             }
 
             .stats-bar {
@@ -880,12 +837,24 @@
                 gap: 1.5rem;
             }
 
+            .stat-number {
+                font-size: 2.2rem;
+            }
+
+            .stat-label {
+                font-size: 0.75rem;
+            }
+
             section {
                 padding: 4rem 1.5rem;
             }
 
             .section-title {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
             }
 
             .timeline {
@@ -908,6 +877,35 @@
             .btn {
                 width: 100%;
                 justify-content: center;
+                padding: 1rem 2rem;
+                font-size: 0.95rem;
+            }
+
+            .profile-showcase {
+                padding: 2rem;
+            }
+
+            .timeline-content {
+                padding: 1.5rem;
+            }
+
+            .timeline-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .expertise-tag {
+                font-size: 0.75rem;
+                padding: 0.6rem 1.2rem;
             }
         }
 
@@ -944,10 +942,6 @@
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="language-selector">
-                <button class="lang-btn active" onclick="switchLanguage('fr', this)" title="Français">🇫🇷 Français</button>
-                <button class="lang-btn" onclick="switchLanguage('en', this)" title="English">🇺🇸 English</button>
-            </div>
         </div>
     </nav>
 
@@ -969,14 +963,14 @@
                 </p>
                 
                 <p class="hero-subtitle">
-                    Expertise polyvalente en Intelligence Artificielle : Computer Vision, NLP (dialecte tunisien), 
+                    Expertise polyvalente en Intelligence Artificielle : Computer Vision, NLP, 
                     Signal Processing et Deep Learning. Publication Q1 Elsevier, membre du laboratoire IDEA LAB. 
-                    Passionnée par l'innovation et la recherche appliquée.
+                    Passionnée par l'innovation et la recherche appliquée en solutions éducatives.
                 </p>
 
                 <div class="hero-expertise">
                     <span class="expertise-tag highlight">Computer Vision</span>
-                    <span class="expertise-tag highlight">NLP - Tunisian Dialect</span>
+                    <span class="expertise-tag highlight">NLP</span>
                     <span class="expertise-tag">Deep Learning</span>
                     <span class="expertise-tag">Signal Processing</span>
                     <span class="expertise-tag">Research & Innovation</span>
@@ -986,7 +980,7 @@
                     <a href="#contact" class="btn btn-primary">
                         <span>📧 Me Contacter</span>
                     </a>
-                    <a href="#" onclick="downloadCV(event)" class="btn btn-secondary">
+                    <a href="https://AbassiSabrine.github.io/CV_Sabrine_Abassi.pdf" onclick="downloadCV(event)" class="btn btn-secondary">
                         <span>📄 Télécharger CV</span>
                     </a>
                 </div>
@@ -1004,24 +998,21 @@
                         <span class="stat-number">15+</span>
                         <span class="stat-label">Certifications Pro</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Masters/Diplômes</span>
-                    </div>
+                 
                 </div>
             </div>
 
             <div class="hero-card">
                 <div class="profile-showcase">
                     <!-- Photo Profile (Initiales) -->
-                    <div class="profile-photo">SA</div>
+                    <img src="sabrine.jpg" alt="Sabrine Abassi" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                     
                     <div class="current-role">
                         <h3>Poste Actuel</h3>
                         <h2>Data Scientist R&D</h2>
                         <p>
-                            SIT E-Learning Solutions • Développement de solutions d'IA avancées • 
-                            NLP, Computer Vision, Signal Processing
+                            SIT E-Learning Solutions • Solutions d'IA pour l'éducation personnalisée • 
+                            NLP, Computer Vision, LLMs
                         </p>
                     </div>
 
@@ -1032,7 +1023,7 @@
                         
                         <div style="color: var(--gray); line-height: 1.9;">
                             <p style="margin-bottom: 1.2rem;">
-                                <strong style="color: var(--dark); font-size: 1.05rem;">M2 Recherche e-Science</strong><br>
+                                <strong style="color: var(--dark); font-size: 1.05rem;">Master de Recherche en Sciences Informatiques</strong><br>
                                 <span style="color: var(--accent2); font-weight: 600;">2025 – Présent</span><br>
                                 Université de Carthage
                             </p>
@@ -1073,7 +1064,7 @@
                     <div class="timeline-company">SIT E-Learning Solutions, Tunis</div>
                     <div class="timeline-description">
                         <ul style="padding-left: 1.5rem; color: var(--gray); line-height: 1.8;">
-                            <li><strong>NLP & Tunisian Dialect:</strong> Solutions NLP pour dialecte tunisien, systèmes de recommandation intelligents</li>
+                            <li><strong>NLP & Chatbots:</strong> Solutions NLP et systèmes de recommandation intelligents pour l'éducation</li>
                             <li><strong>Computer Vision:</strong> Segmentation automatique de vidéos éducatives, analyse d'images pédagogiques</li>
                             <li><strong>LLMs & Conversational AI:</strong> Assistants conversationnels intelligents pour l'éducation personnalisée</li>
                             <li><strong>Multimodal Processing:</strong> Traitement de contenus multimodaux (texte, audio, vidéo)</li>
@@ -1104,9 +1095,9 @@
                     <div class="timeline-company">Hope Horizon World, Tunis</div>
                     <div class="timeline-description">
                         <ul style="padding-left: 1.5rem; color: var(--gray); line-height: 1.8;">
-                            <li><strong>Audio Signal Processing:</strong> Traitement de signaux audio en dialecte tunisien</li>
+                            <li><strong>Audio Signal Processing:</strong> Traitement de signaux audio médicaux</li>
                             <li><strong>NLP Healthcare:</strong> Analyse d'opinions et sentiment analysis pour l'e-santé</li>
-                            <li>Expertise en dialecte tunisien pour applications médicales</li>
+                            <li>Développement de modèles NLP pour applications médicales</li>
                         </ul>
                     </div>
                 </div>
@@ -1144,13 +1135,6 @@
                     <div class="cert-icon">💻</div>
                     <div class="cert-org">DataCamp</div>
                     <div class="cert-name">AI Engineer for Developers</div>
-                    <div class="cert-year">2024</div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon">📊</div>
-                    <div class="cert-org">DataCamp</div>
-                    <div class="cert-name">AI Engineer for Data Scientists</div>
                     <div class="cert-year">2024</div>
                 </div>
 
@@ -1223,7 +1207,7 @@
             </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
             <div style="background: white; padding: 2.5rem; border-radius: 25px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border-top: 5px solid var(--primary);">
                 <h3 style="color: var(--primary); font-size: 1.4rem; font-weight: 700; margin-bottom: 2rem;">Computer Vision</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
@@ -1235,12 +1219,12 @@
             </div>
 
             <div style="background: white; padding: 2.5rem; border-radius: 25px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border-top: 5px solid var(--primary);">
-                <h3 style="color: var(--primary); font-size: 1.4rem; font-weight: 700; margin-bottom: 2rem;">NLP & Tunisian Dialect</h3>
+                <h3 style="color: var(--primary); font-size: 1.4rem; font-weight: 700; margin-bottom: 2rem;">NLP & LLMs</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
                     <span style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 0.8rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 600;">BERT</span>
                     <span style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 0.8rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 600;">Transformers</span>
                     <span style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 0.8rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 600;">LLMs</span>
-                    <span style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 0.8rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 600;">Tunisian Dialect</span>
+                    <span style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 0.8rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 600;">Chatbots</span>
                 </div>
             </div>
 
@@ -1278,15 +1262,15 @@
         <div style="max-width: 800px; margin: 0 auto; background: white; padding: 3rem; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
             <div style="display: grid; gap: 2rem;">
                 <div style="display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #f8fafc, #f1f5f9); border-radius: 20px;">
-                    <div style="width: 60px; height: 60px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(15, 44, 89, 0.3);">📧</div>
-                    <div>
+                    <div style="width: 60px; height: 60px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(15, 44, 89, 0.3); flex-shrink: 0;">📧</div>
+                    <div style="min-width: 0;">
                         <h4 style="color: var(--dark); font-weight: 700; margin-bottom: 0.5rem;">Email</h4>
-                        <a href="/cdn-cgi/l/email-protection#aeddcfccdcc7c0cbcfcccfddddc79c9e9c9eeec9c3cfc7c280cdc1c3" style="color: var(--gray); text-decoration: none;"><span class="__cf_email__" data-cfemail="b3c0d2d1c1daddd6d2d1d2c0c0da81838183f3d4ded2dadf9dd0dcde">[email&#160;protected]</span></a>
+                        <a href="mailto:sabrineabassi2020@gmail.com" style="color: var(--gray); text-decoration: none; word-break: break-all;">sabrineabassi2020@gmail.com</a>
                     </div>
                 </div>
 
                 <div style="display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #f8fafc, #f1f5f9); border-radius: 20px;">
-                    <div style="width: 60px; height: 60px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(15, 44, 89, 0.3);">📱</div>
+                    <div style="width: 60px; height: 60px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(15, 44, 89, 0.3); flex-shrink: 0;">📱</div>
                     <div>
                         <h4 style="color: var(--dark); font-weight: 700; margin-bottom: 0.5rem;">Téléphone</h4>
                         <a href="tel:+21627026006" style="color: var(--gray); text-decoration: none;">+216 27 026 006</a>
@@ -1294,15 +1278,15 @@
                 </div>
 
                 <div style="display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #f8fafc, #f1f5f9); border-radius: 20px;">
-                    <div style="width: 60px; height: 60px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(15, 44, 89, 0.3);">💼</div>
-                    <div>
+                    <div style="width: 60px; height: 60px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(15, 44, 89, 0.3); flex-shrink: 0;">💼</div>
+                    <div style="min-width: 0;">
                         <h4 style="color: var(--dark); font-weight: 700; margin-bottom: 0.5rem;">LinkedIn</h4>
-                        <a href="https://www.linkedin.com/in/sabrine-abassi-data-scientist" target="_blank" style="color: var(--gray); text-decoration: none;">linkedin.com/in/sabrine-abassi-data-scientist</a>
+                        <a href="https://www.linkedin.com/in/sabrine-abassi-data-scientist" target="_blank" style="color: var(--gray); text-decoration: none; word-break: break-word;">linkedin.com/in/sabrine-abassi-data-scientist</a>
                     </div>
                 </div>
 
                 <div style="display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #f8fafc, #f1f5f9); border-radius: 20px;">
-                    <div style="width: 60px; height: 60px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(15, 44, 89, 0.3);">📍</div>
+                    <div style="width: 60px; height: 60px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(15, 44, 89, 0.3); flex-shrink: 0;">📍</div>
                     <div>
                         <h4 style="color: var(--dark); font-weight: 700; margin-bottom: 0.5rem;">Localisation</h4>
                         <p style="color: var(--gray); margin: 0;">Mourouj 2, Tunis, Tunisie</p>
@@ -1320,50 +1304,22 @@
         </p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Set current year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Language switcher function
-        function switchLanguage(lang, element) {
-            // Update active button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Add active class to clicked button
-            if (element) {
-                element.classList.add('active');
-            }
-
-            if (lang === 'en') {
-                // Redirect to English version (create index-en.html for English version)
-                alert('🌍 English version coming soon!\n\nLa version anglaise sera bientôt disponible.');
-                // Uncomment when English version is ready:
-                // window.location.href = 'index-en.html';
-            }
-            // FR is already the current page
-        }
-
-        // CV Download function - FIXED
+        // CV Download function
         function downloadCV(event) {
             event.preventDefault();
             
-            // Create a temporary link element
+            // Message pour informer l'utilisateur
+            alert('Votre CV sera téléchargé. Assurez-vous que le fichier CV est disponible dans le même répertoire que ce portfolio.');
+            
+            // Créer un lien de téléchargement
             const link = document.createElement('a');
-            
-            // Set the href to your CV PDF file
-            // Make sure to upload your PDF CV with this exact name to GitHub
-            link.href = 'CV_Sabrine_ABASSI_2026.pdf';
-            
-            // Set download attribute with desired filename
-            link.download = 'CV_Sabrine_ABASSI_Data_Scientist_IA.pdf';
-            
-            // Trigger download
+            link.href = 'CV_Sabrine_Abassi_Optimized.pdf'; // Nom du fichier CV
+            link.download = 'CV_Sabrine_Abassi_2026.pdf';
             link.click();
-            
-            // Optional: Show success message
-            console.log('✅ CV download initiated');
         }
 
         // Mobile menu toggle
@@ -1423,4 +1379,13 @@
                 }
             });
 
-            document.querySelectorAll('nav a').f
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
