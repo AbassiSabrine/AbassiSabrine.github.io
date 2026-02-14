@@ -42,12 +42,12 @@
             overflow-x: hidden;
         }
 
-        /* Language Switcher */
+        /* Language Switcher - Repositionné */
         .language-switcher {
             position: fixed;
-            top: 100px;
+            top: 20px;
             right: 30px;
-            z-index: 999;
+            z-index: 1001;
             display: flex;
             gap: 0;
             background: #E8EDF5;
@@ -979,7 +979,7 @@
     </style>
 </head>
 <body>
-    <!-- Language Switcher -->
+    <!-- Language Switcher - Maintenant en haut à droite, détaché du cadre -->
     <div class="language-switcher">
         <button class="lang-btn active" onclick="switchLanguage('fr')" data-lang="fr">FR</button>
         <button class="lang-btn" onclick="switchLanguage('en')" data-lang="en">EN</button>
@@ -1593,7 +1593,7 @@
             const cvBtn = document.getElementById('downloadCvBtn');
             if (cvBtn) {
                 cvBtn.href = cvFiles[currentLang];
-                cvBtn.download = cvFiles[currentLang].split('/').pop();
+                cvBtn.download = cvFiles[currentLang];
             }
         }
 
