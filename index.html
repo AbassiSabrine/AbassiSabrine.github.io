@@ -1040,13 +1040,11 @@
                     <a href="#contact" class="btn btn-primary">
                         <span data-i18n="btn-contact">📧 Me Contacter</span>
                     </a>
-                                       <a id="downloadCvBtn"
+                    <a id="downloadCvBtn"
                        class="btn btn-secondary"
                        download>
                         <span data-i18n="btn-cv">📄 Télécharger CV</span>
                     </a>
-
-
                 </div>
 
                 <div class="stats-bar">
@@ -1556,8 +1554,8 @@
 
         // CV Files mapping
         const cvFiles = {
-            fr: 'CV_Sabrine_Abassi_FR.pdf',
-            en: 'CV_Sabrine_Abassi_EN.pdf'
+            fr: './cv/CV_Sabrine_Abassi_FR.pdf',
+            en: './cv/CV_Sabrine_Abassi_EN.pdf'
         };
 
         // Current language
@@ -1593,8 +1591,10 @@
         // Update CV download link based on language
         function updateCVDownloadLink() {
             const cvBtn = document.getElementById('downloadCvBtn');
-            cvBtn.setAttribute('href', cvFiles[currentLang]);
-            cvBtn.setAttribute('download', cvFiles[currentLang]);
+            if (cvBtn) {
+                cvBtn.href = cvFiles[currentLang];
+                cvBtn.download = cvFiles[currentLang].split('/').pop();
+            }
         }
 
         // Initialize CV download link
@@ -1666,37 +1666,6 @@
                 }
             });
         });
-      
-function updateCVLink(lang) {
-    const btn = document.getElementById("downloadCvBtn");
-    if (!btn) return;
-
-    if (lang === "en") {
-        btn.href = "./cv/CV Sabrine Abassi En.pdf";   // chemin PDF anglais
-        btn.download = "CV Sabrine Abassi En.pdf";   // nom affiché lors du téléchargement
-    } else {
-        btn.href = "./cv/CV Sabrine Abassi Fr.pdf";  // chemin PDF français
-        btn.download = "CV Sabrine Abassi Fr.pdf";   // nom affiché lors du téléchargement
-    }
-}
-
-// Appel automatique lors du clic sur les boutons de langue
-document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const lang = btn.dataset.lang;
-        updateCVLink(lang);
-    });
-});
-
-// Initialisation au chargement de la page
-window.addEventListener("DOMContentLoaded", () => {
-    const activeLangBtn = document.querySelector(".lang-btn.active");
-    if (activeLangBtn) {
-        updateCVLink(activeLangBtn.dataset.lang);
-    }
-});
-
-
     </script>
 </body>
 </html>
