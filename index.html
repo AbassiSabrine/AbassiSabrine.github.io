@@ -1040,12 +1040,12 @@
                     <a href="#contact" class="btn btn-primary">
                         <span data-i18n="btn-contact">📧 Me Contacter</span>
                     </a>
-                    <a href="cv/Sabrine_Abassi_CV.pdf"
+                                       <a id="downloadCvBtn"
                        class="btn btn-secondary"
-                       download="Sabrine_Abassi_CV.pdf"
-                       target="_blank">
+                       download>
                         <span data-i18n="btn-cv">📄 Télécharger CV</span>
                     </a>
+
 
                 </div>
 
@@ -1666,6 +1666,37 @@
                 }
             });
         });
+      
+function updateCVLink(lang) {
+    const btn = document.getElementById("downloadCvBtn");
+    if (!btn) return;
+
+    if (lang === "en") {
+        btn.href = "./cv/CV Sabrine Abassi En.pdf";   // chemin PDF anglais
+        btn.download = "CV Sabrine Abassi En.pdf";   // nom affiché lors du téléchargement
+    } else {
+        btn.href = "./cv/CV Sabrine Abassi Fr.pdf";  // chemin PDF français
+        btn.download = "CV Sabrine Abassi Fr.pdf";   // nom affiché lors du téléchargement
+    }
+}
+
+// Appel automatique lors du clic sur les boutons de langue
+document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+        updateCVLink(lang);
+    });
+});
+
+// Initialisation au chargement de la page
+window.addEventListener("DOMContentLoaded", () => {
+    const activeLangBtn = document.querySelector(".lang-btn.active");
+    if (activeLangBtn) {
+        updateCVLink(activeLangBtn.dataset.lang);
+    }
+});
+
+
     </script>
 </body>
 </html>
