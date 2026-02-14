@@ -43,27 +43,27 @@
         }
 
         /* Language Switcher - Repositionné */
- .language-switcher {
+.language-switcher {
     position: fixed;
-    top: 90px;
-    right: 120px;  /* Augmenté pour décaler plus à droite */
+    bottom: 30px;  /* Changé de top à bottom */
+    right: 150px;  /* Augmenté pour plus à droite */
     z-index: 999;
     display: flex;
     gap: 0;
     background: #E8EDF5;
-    padding: 4px;  /* Réduit de 6px à 4px */
-    border-radius: 40px;  /* Réduit pour correspondre à la nouvelle taille */
+    padding: 4px;
+    border-radius: 40px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .lang-btn {
-    min-width: 55px;  /* Réduit de 65px à 55px */
-    height: 38px;  /* Réduit de 44px à 38px */
+    min-width: 55px;
+    height: 38px;
     border-radius: 40px;
     border: none;
     background: transparent;
     cursor: pointer;
-    font-size: 0.8rem;  /* Réduit de 0.85rem à 0.8rem */
+    font-size: 0.8rem;
     font-weight: 800;
     color: #6B7280;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,7 +73,6 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
-
         .lang-btn:hover:not(.active) {
             color: #374151;
         }
